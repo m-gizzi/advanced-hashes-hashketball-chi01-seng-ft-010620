@@ -196,5 +196,5 @@ def big_shoe_rebounds
     end
   end
    shoe_sizes.sort!
-   p shoe_sizes
+   p roster
 end
