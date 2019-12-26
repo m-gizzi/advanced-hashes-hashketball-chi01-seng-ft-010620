@@ -279,7 +279,7 @@ def long_name_steals_a_ton?
     roster = data[side][:players]
     roster.each do | player_hash |
       name_length.push player_hash[:player_name].length
-      rebounds.push player_hash[:steals]
+      steals.push player_hash[:steals]
       player_list.push player_hash
     end
   end
