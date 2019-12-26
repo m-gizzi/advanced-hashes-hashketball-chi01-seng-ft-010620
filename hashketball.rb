@@ -195,6 +195,8 @@ def big_shoe_rebounds
       shoe_sizes.push player_hash[:shoe]
     end
   end
-   shoe_sizes.sort!
-   p roster
+  shoe_sizes.sort!
+  roster.each do | player_hash |
+     p player_hash
+   end
 end
