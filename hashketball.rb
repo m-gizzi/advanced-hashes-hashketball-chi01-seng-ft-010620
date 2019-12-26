@@ -272,6 +272,7 @@ def long_name_steals_a_ton?
   side_array = data.keys
   name_length = []
   player_list = []
+  longest_name = nil
   side_array.each do | side |
     roster = data[side][:players]
     roster.each do | player_hash |
