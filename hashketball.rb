@@ -255,13 +255,13 @@ def player_with_longest_name
   side_array.each do | side |
     roster = data[side][:players]
     roster.each do | player_hash |
-      name_length.push player_hash[:points]
+      name_length.push player_hash[:player_name]
       player_list.push player_hash
     end
   end
   name_length.sort!
   player_list.each do | player_hash |
-    if player_hash[:points] == name_length[9]
+    if player_hash[:player_name] == name_length[9]
       return player_hash[:player_name]
     end
   end
