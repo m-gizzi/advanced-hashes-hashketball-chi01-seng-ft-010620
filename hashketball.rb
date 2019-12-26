@@ -236,5 +236,5 @@ def winning_team
       p points_scored
     end
   end
-  p scores
+  scores
 end
