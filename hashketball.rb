@@ -188,15 +188,16 @@ def big_shoe_rebounds
   data = game_hash
   side_array = data.keys
   shoe_sizes = []
-  roster = []
+  player_list = []
   side_array.each do | side |
     roster = data[side][:players]
     roster.each do | player_hash |
       shoe_sizes.push player_hash[:shoe]
+      player_list.push player_hash
     end
   end
   shoe_sizes.sort!
-  p roster
+  p player_list
   #roster.each do | player_hash |
   #  p player_hash[:shoe]
   #end
