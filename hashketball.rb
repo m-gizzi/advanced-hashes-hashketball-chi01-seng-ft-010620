@@ -197,8 +197,9 @@ def big_shoe_rebounds
     end
   end
   shoe_sizes.sort!
-  p player_list
   player_list.each do | player_hash |
-    p player_hash[:shoe]
+    if player_hash[:shoe] == shoe_sizes[9]
+      p "yes"
+    end
   end
 end
