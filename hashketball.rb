@@ -240,5 +240,9 @@ def winning_team
     teams_list[team_name] = points_scored
   end
   scores.sort!
-  p teams_list
+  teams_list.each do | team, score |
+    if score == scores[1]
+      return team
+    end
+  end
 end
