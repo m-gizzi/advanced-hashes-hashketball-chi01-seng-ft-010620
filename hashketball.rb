@@ -293,5 +293,7 @@ def long_name_steals_a_ton?
       most_steals = player_hash[:player_name]
     end
   end
-  most_steals
+  if longest_name == most_steals
+    return true
+  end
 end
