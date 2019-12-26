@@ -190,7 +190,7 @@ def big_shoe_rebounds
   shoe_sizes = []
   roster = []
   side_array.each do | side |
-    roster.push data[side][:players]
+    roster = data[side][:players]
     roster.each do | player_hash |
       shoe_sizes.push player_hash[:shoe]
     end
