@@ -293,5 +293,5 @@ def long_name_steals_a_ton?
       most_steals = player_hash[:player_name]
     end
   end
-  p most_steals
+  most_steals
 end
