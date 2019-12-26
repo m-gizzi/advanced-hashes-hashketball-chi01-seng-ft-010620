@@ -255,7 +255,7 @@ def player_with_longest_name
   side_array.each do | side |
     roster = data[side][:players]
     roster.each do | player_hash |
-      name_length.push player_hash[:player_name]
+      name_length.push player_hash[:player_name].length
       player_list.push player_hash
     end
   end
