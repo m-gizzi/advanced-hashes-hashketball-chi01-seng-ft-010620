@@ -266,3 +266,24 @@ def player_with_longest_name
     end
   end
 end
+
+def long_name_steals_a_ton?
+  data = game_hash
+  side_array = data.keys
+  name_length = []
+  player_list = []
+  side_array.each do | side |
+    roster = data[side][:players]
+    roster.each do | player_hash |
+      name_length.push player_hash[:player_name].length
+      player_list.push player_hash
+    end
+  end
+  name_length.sort!
+  player_list.each do | player_hash |
+    if player_hash[:player_name].length == name_length[9]
+      longest_name = player_hash[:player_name]
+    end
+  end
+  p longest_name
+end
