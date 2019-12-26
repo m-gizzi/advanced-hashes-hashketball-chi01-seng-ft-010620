@@ -271,7 +271,7 @@ def long_name_steals_a_ton?
   data = game_hash
   side_array = data.keys
   name_length = []
-  rebounds
+  rebounds = []
   player_list = []
   longest_name = nil
   most_rebounds = nil
@@ -279,13 +279,16 @@ def long_name_steals_a_ton?
     roster = data[side][:players]
     roster.each do | player_hash |
       name_length.push player_hash[:player_name].length
+      rebounds.push player_hash[:rebounds]
       player_list.push player_hash
     end
   end
   name_length.sort!
+  rebounds.sort!
   player_list.each do | player_hash |
     if player_hash[:player_name].length == name_length[9]
       longest_name = player_hash[:player_name]
     end
   end
+  
 end
