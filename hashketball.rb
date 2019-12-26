@@ -199,7 +199,7 @@ def big_shoe_rebounds
   shoe_sizes.sort!
   player_list.each do | player_hash |
     if player_hash[:shoe] == shoe_sizes[9]
-      p player_hash[:rebounds]
+      return player_hash[:rebounds]
     end
   end
 end
