@@ -259,10 +259,10 @@ def player_with_longest_name
       player_list.push player_hash
     end
   end
-  name_length.sort!
+  p name_length.sort!
   player_list.each do | player_hash |
     if player_hash[:player_name] == name_length[9]
-      p player_hash[:player_name]
+      return player_hash[:player_name]
     end
   end
 end
