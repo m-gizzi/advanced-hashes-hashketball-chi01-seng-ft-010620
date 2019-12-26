@@ -227,12 +227,13 @@ end
 def winning_team
   data = game_hash
   side_array = data.keys
-  points_scored = 0
   scores = []
   side_array.each do | side |
     roster = data[side][:players]
     roster.each do | player_hash |
-      scores.push player_hash[:points]
+      points_scored = 0
+      points_scored += player_hash[:points]
+      p points_scored
     end
   end
   p scores
