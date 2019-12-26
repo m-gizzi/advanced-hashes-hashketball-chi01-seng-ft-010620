@@ -230,11 +230,11 @@ def winning_team
   scores = []
   side_array.each do | side |
     roster = data[side][:players]
+    points_scored = 0
     roster.each do | player_hash |
-      points_scored = 0
       points_scored += player_hash[:points]
-      p points_scored
     end
+    p points_scored
   end
   scores
 end
